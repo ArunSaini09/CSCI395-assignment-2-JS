@@ -15,7 +15,8 @@ Array.prototype.myMap = function(callbackFn) {
   const newArray = [];
   for(let i = 0; i < this.length; i++)
   {
-    newArray[i] = callbackFn(this[i]);
+    //callbackFn can take in (element,index,array)
+    newArray[i] = callbackFn(this[i], i. this);
   }
 
   return newArray;
