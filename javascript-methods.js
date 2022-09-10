@@ -62,8 +62,14 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+//reduce is called with an intitial value
+Array.prototype.myReduce = function(callbackFn, runningValue) {
+  for(let i = 0; i < this.length; i++){
+    //call the callbackFn with the runningValue as the first parameter
+    //this order matters for operations like subtraction to work properly
+    runningValue = callbackFn(runningValue, this[i]);
+  }
+  return runningValue;
 };
 
 // INCLUDES //
