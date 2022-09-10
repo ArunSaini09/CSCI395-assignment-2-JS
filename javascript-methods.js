@@ -15,12 +15,17 @@ Array.prototype.myMap = function(callbackFn) {
   const newArray = [];
   for(let i = 0; i < this.length; i++)
   {
-    newArray[i] = callbackFn(this[i]);
+    //callbackFn can take in (element,index,array)
+    newArray[i] = callbackFn(this[i], i, this);
   }
 
   return newArray;
 };
-
+let arr = [1,2,3,4];
+let newA = arr.myMap(x => {
+  return x*2;
+}, 1);
+console.log(newA);
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
   // Place your code here.
