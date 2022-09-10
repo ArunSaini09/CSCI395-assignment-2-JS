@@ -21,14 +21,19 @@ Array.prototype.myMap = function(callbackFn) {
 
   return newArray;
 };
-let arr = [1,2,3,4];
-let newA = arr.myMap(x => {
-  return x*2;
-}, 1);
-console.log(newA);
+
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  const newArray = [];
+  for(let i = 0; i < this.length; i++)
+  {
+    if(callbackFn(this[i]) === true)
+    {
+      newArray.push(this[i]);
+    }
+  }
+
+  return newArray;
 };
 
 // SOME //
