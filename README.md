@@ -1,5 +1,7 @@
-# javascript-methods-starter-template-code
-Starter template code for Assignment 2 - JavaScript Methods. 
+# javascript-methods
+
+## Group Members:
+Arun Saini - ArunSaini09
 
 ## JavaScript Prototype: Method ##
 Every object in JavaScript has a built-in property called "prototype." 
