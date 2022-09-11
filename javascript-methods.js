@@ -121,5 +121,11 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  
+  const newArray = [];
+  for(let objKey in object){
+    newArray.push(object[objKey]);
+  }
+
+  return newArray;
 };
