@@ -86,6 +86,7 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
+  
   for(let i = 0; i < this.length; i++) {
     if(this[i] === searchElement) {
       return i;
@@ -97,7 +98,14 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+
+  for(let i = this.length - 1; i >= 0; i--) {
+    if(this[i] === searchElement) {
+      return i;
+    }
+  }//end for
+
+  return -1;
 };
 
 // KEYS //
