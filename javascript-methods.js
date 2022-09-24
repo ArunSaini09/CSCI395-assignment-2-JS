@@ -15,6 +15,8 @@ Array.prototype.myMap = function(callbackFn) {
   const newArray = [];
   for(let i = 0; i < this.length; i++)
   {
+    if(this[i] === undefined) continue;
+
     //callbackFn can take in (element,index,array)
     newArray[i] = callbackFn(this[i], i, this);
   }
@@ -27,6 +29,8 @@ Array.prototype.myFilter = function(callbackFn) {
   const newArray = [];
   for(let i = 0; i < this.length; i++)
   {
+    if(this[i] === undefined) continue;
+
     if(callbackFn(this[i]) === true)
     {
       newArray.push(this[i]);
@@ -40,6 +44,9 @@ Array.prototype.myFilter = function(callbackFn) {
 Array.prototype.mySome = function(callbackFn) {
   
   for(let i = 0; i < this.length; i++){
+
+    if(this[i] === undefined) continue;
+
     if(callbackFn(this[i]) === true){
       return true;
     }
@@ -53,6 +60,8 @@ Array.prototype.myEvery = function(callbackFn) {
   
   for(let i = 0; i< this.length; i++)
   {
+    if(this[i] === undefined) continue;
+
     if(callbackFn(this[i]) === false){
       return false;
     }
@@ -88,6 +97,9 @@ Array.prototype.myIncludes = function(searchElement) {
 Array.prototype.myIndexOf = function(searchElement) {
   
   for(let i = 0; i < this.length; i++) {
+
+    if(this[i] === undefined) continue;
+
     if(this[i] === searchElement) {
       return i;
     }
@@ -100,6 +112,9 @@ Array.prototype.myIndexOf = function(searchElement) {
 Array.prototype.myLastIndexOf = function(searchElement) {
 
   for(let i = this.length - 1; i >= 0; i--) {
+
+    if(this[i] === undefined) continue;
+
     if(this[i] === searchElement) {
       return i;
     }
